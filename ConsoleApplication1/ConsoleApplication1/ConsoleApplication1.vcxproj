@@ -169,8 +169,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\SDL2lib\SDL2.dll" />
-    <None Include="..\..\SDL2lib\SDL2_net.dll" />
+    <None Include="..\..\SDL2lib\SDL2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </None>
+    <None Include="..\..\SDL2lib\SDL2_net.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
